@@ -3,7 +3,7 @@
 class DatabaseConn {	
 
   private $conn;
-  /* THIS CLASS CONNECTS TO THE DATABASE ONLY AND SETS UP THE ATTRIBUTE PARAMETERS */
+  /* THIS CLASS CONNECTS TO T HE DATABASE ONLY AND SETS UP THE ATTRIBUTE PARAMETERS */
   public function dbOpen(){
 
     try {
