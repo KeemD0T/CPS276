@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fileContent = $_POST['fileContent'];
 
     $folder = new Directories();
-    $output = $folder->createDirectoryAndFile($dirName, $fileContent);
-
+    //
+    
   if ($output){
     $fullPath = $output;
     // the <a> tag concentrates strings a variables. The period operator in PHP is used for string conatenation
