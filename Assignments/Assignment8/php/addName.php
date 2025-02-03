@@ -1,4 +1,10 @@
 <?php
+
+echo "it works";
+
+return;
+
+
 session_start();
 
 $response = [];

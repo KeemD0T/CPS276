@@ -3,7 +3,7 @@
 class DatabaseConn {	
 
   private $conn;
-  /* THIS CLASS CONNECTS TO T HE DATABASE ONLY AND SETS UP THE ATTRIBUTE PARAMETERS */
+  /* THIS CLASS CONNECTS TO THE DATABASE ONLY AND SETS UP THE ATTRIBUTE PARAMETERS */
   public function dbOpen(){
 
     try {
@@ -12,7 +12,7 @@ class DatabaseConn {
       $dbName = 'hsharris';//this will be your WCC username
       $dbUsr = 'hsharris';//this will be your WCC username
       $dbPass = 'dyzd8JHuWYSG';//this will be the password found in the video.
-      
+
       $this->conn = new PDO('mysql:host=' . $dbHost . ';dbname=' . $dbName, $dbUsr, $dbPass);
       
       $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); /*THIS STOPS PDO FROM ADDING SINGLE QUOTES AROUND INTEGER VALUES.*/
