@@ -1,7 +1,10 @@
 
 <?php
-$numRows = 15; // Number of rows
-$numCells = 5; // Number of cells per row
+$evenNumbers;
+$form;
+$createTable;
+$numRows = 8; // Number of rows
+$numCells = 6; // Number of cells per row
 
 echo "<table border='2'>";
 
@@ -17,7 +20,7 @@ echo "</tr>";
 for ($row = 1; $row <= $numRows; $row++) {
     echo "<tr>";
     for ($cell = 1; $cell <= $numCells; $cell++) {
-        echo "<td>Row $row Cell $cell</td>";
+        echo "<td>Row $row Col $cell</td>";
     }
     echo "</tr>";
 }
@@ -37,8 +40,10 @@ for ($row = 1; $row <= $numRows; $row++) {
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class = "container">
   <?php
+    echo $evenNumbers;
+    echo $form;
     // Display the nested list HTML
     echo "</table>";
     ?>
