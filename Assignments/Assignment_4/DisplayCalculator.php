@@ -2,6 +2,7 @@
 require_once "Calculator.php";
 
 $Calculator = new Calculator();
+
 $result = "";
 $result .= $Calculator->calc("*", 10, 2);
 $result .= $Calculator->calc("*", 4.56, 2);
@@ -36,4 +37,4 @@ $result .= $Calculator->calc(10);
     echo $result
     ?>
   </body>
-</html>';
+</html>
