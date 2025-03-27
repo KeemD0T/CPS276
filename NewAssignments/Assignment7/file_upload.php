@@ -9,38 +9,34 @@ require_once "fileUploadProc.php";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    
+    <title>File Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+    <div class="container mt-5">
+        <h1>File Upload</h1>
+        <p><a href="list_files.php">View Files</a></p>
 
-  <h1>File Upload</h1>
-  
-<!-- Display message -->
-<div>
-            <?php if (isset($msg)) { echo $msg; } ?>
-            <?php if (!empty($fileLink)) { ?>
-                <p><a href="<?php echo $fileLink; ?>" target="_blank">View Uploaded File</a></p>
-            <?php } ?>
-        </div>
-    <form method="POST" action = "" enctype="multipart/form-data"> 
+        <!-- Display message -->
+        <?php if (!empty($msg)): ?>
+            <div class="alert alert-info">
+                <?php echo htmlspecialchars($msg); ?>
+            </div>
+        <?php endif; ?>
 
-<div class="mb-3">
-  <label for="dirName" class="form-label">File Name</label>
-  <input type="text" class="form-control" name= "FileName" id="FileName" placeholder="">
-</div>
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="FileName" class="form-label">File Name</label>
+                <input type="text" class="form-control" name="FileName" id="FileName" required>
+            </div>
 
-<div class="mb-3">
-        <input type="file" name="file" id="file" required>    
-</div>
+            <div class="mb-3">
+                <label for="file" class="form-label">Select File</label>
+                <input type="file" class="form-control" name="file" id="file" required>
+            </div>
 
-<button name ='submitButton' type="submit" class="btn btn-primary">Submit</button>
-    </form> 
-    
-    
-    
-    
-    </body>
+            <button name="submitButton" type="submit" class="btn btn-primary">Upload File</button>
+        </form>
+    </div>
+  </body>
 </html>
