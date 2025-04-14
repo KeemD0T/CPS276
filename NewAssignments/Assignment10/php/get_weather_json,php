@@ -1,0 +1,22 @@
+{
+  "searched_city": {
+    "name": "Springfield",
+    "temperature": "72°F",
+    "humidity": "60%",
+    "forecast": [
+      { "day": "Monday", "condition": "Sunny" },
+      { "day": "Tuesday", "condition": "Cloudy" },
+      { "day": "Wednesday", "condition": "Rainy" }
+    ]
+  },
+  "higher_temperatures": [
+    { "name": "Cypress Creek", "temperature": "81°F" },
+    { "name": "Westbrook", "temperature": "79°F" },
+    { "name": "Ogdenville", "temperature": "77°F" }
+  ],
+  "lower_temperatures": [
+    { "name": "Shelbyville", "temperature": "64°F" },
+    { "name": "Waverly Hills", "temperature": "66°F" },
+    { "name": "North Haverbrook", "temperature": "68°F" }
+  ]
+}
